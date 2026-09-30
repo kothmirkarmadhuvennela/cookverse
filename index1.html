@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CookVerse | Cooking Video Tutorials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-icon">🍳</span>
+          <span>CookVerse</span>
+        </div>
+
+        <nav class="menu">
+          <a href="#home">Home</a>
+          <a href="#recipes">Recipes</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <button class="nav-button">Start Cooking</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="tag">Learn • Cook • Enjoy</p>
+            <h1>Cook delicious meals with easy video tutorials</h1>
+            <p class="subtitle">
+              Explore step-by-step recipes, smart cooking tips, and video guides from beginners to expert chefs.
+            </p>
+            <div class="hero-actions">
+              <a href="#recipes" class="primary-btn">Explore Recipes</a>
+              <a href="#about" class="secondary-btn">Watch Demo</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
+              alt="Cooking"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="filter-section container" id="recipes">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search recipes..." />
+        </div>
+
+        <div class="chips">
+          <button class="chip active" data-category="All">All</button>
+          <button class="chip" data-category="Breakfast">Breakfast</button>
+          <button class="chip" data-category="Lunch">Lunch</button>
+          <button class="chip" data-category="Dinner">Dinner</button>
+          <button class="chip" data-category="Dessert">Dessert</button>
+        </div>
+      </section>
+
+      <section class="recipes container">
+        <div id="recipeList" class="recipe-grid"></div>
+      </section>
+    </main>
+
+    <section id="about" class="about">
+      <div class="container about-box">
+        <h2>Why people love CookVerse</h2>
+        <div class="about-grid">
+          <div>
+            <h3>Step-by-step cooking</h3>
+            <p>Every recipe includes ingredients, steps, and a visual video tutorial.</p>
+          </div>
+          <div>
+            <h3>Simple and beginner-friendly</h3>
+            <p>Easy dishes and clear instructions help new cooks build confidence.</p>
+          </div>
+          <div>
+            <h3>Quick and tasty</h3>
+            <p>Enjoy meals with manageable time and ingredients you can find easily.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 CookVerse. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <div id="recipeModal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeModal" class="close-btn">✕</button>
+        <div class="modal-video">
+          <iframe
+            id="recipeVideo"
+            src=""
+            title="Recipe video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <div class="meta">
+            <span id="modalCategory"></span>
+            <span id="modalTime"></span>
+            <span id="modalDifficulty"></span>
+          </div>
+
+          <h3>Ingredients</h3>
+          <ul id="ingredientList"></ul>
+
+          <h3>Cooking Process</h3>
+          <ol id="stepList"></ol>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
